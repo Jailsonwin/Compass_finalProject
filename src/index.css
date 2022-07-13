@@ -1,11 +1,7 @@
-@import url(//db.onlinewebfonts.com/c/7200c6dd8ac604abe09f5159e53a40c0?family=Mark+Pro);
-
-body {
-  
-}
+@import url(https://fonts.googleapis.com/css2?family=Italiana&family=Roboto:wght@100;300&display=swap);
 
 * {
-  font-family: 'Mark Pro', serif;
+  font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
 }
 
