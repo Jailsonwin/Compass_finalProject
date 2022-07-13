@@ -35,6 +35,7 @@
 .buttons {
     display: flex;
     align-items: flex-end;
+    flex-direction: initial;
     .next {
         margin-left: 19.2vw;
         width: 131px;
