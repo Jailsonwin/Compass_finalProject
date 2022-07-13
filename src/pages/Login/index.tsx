@@ -1,6 +1,6 @@
 import styles from './Login.module.scss';
 import logo from 'assets/logo.png';
-import LoginForm from '../../components/FormLogin';
+import LoginForm from '../../components/LoginForm';
 
 export default function Login() {
     return(

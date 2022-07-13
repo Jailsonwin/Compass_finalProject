@@ -1,18 +1,18 @@
-import styles from './Timer.module.scss';
 import { ReactEventHandler, useState } from 'react';
+import styles from './Timer.module.scss';
 
 export default function Timer() {
     const [count, setCount] = useState<number>(60);
 
-    function counter (time: number = 0): any{
+    function counter(time: number = 0): any{
         setTimeout(() => {
-            if(time > 0){
-                setCount(time -1)
-                return counter(time -1);
-            }else{
-                return counter(60)
+            if(time > 0) {
+                setCount(time - 1);
+                return counter(time - 1);
+            }else {
+                return counter(60);
             }
-        }, 1000)
+        }, 1000);
     }
 
     return(
@@ -21,7 +21,7 @@ export default function Timer() {
                 Application refresh in
             </p>
             <div className={styles.timer}>
-                <h2 id='timer'>
+                <h2 id="timer">
                     {count}
                 </h2>
                 <p>

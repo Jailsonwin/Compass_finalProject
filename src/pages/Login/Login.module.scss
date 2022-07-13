@@ -9,19 +9,19 @@
         flex-direction: column;
         width: 50vw;
         height: 100vh;
-        justify-content: center;
-        align-items: center;
+        padding-left: 15%;
+        //padding-right: 15%;
+        padding-top: 10%;
         p{
             margin: 0;
             color: $secondary;
-            width: 380px;
         }
         .greeting {
             font-size: 60px;
             margin-bottom: 17px;
         }
         .instructions {
-            width: 380px;
+            width: 300px;
             font-size: 16px;
             line-height: 20px;
             padding-bottom: 6rem;
@@ -41,3 +41,44 @@
         }
     }
 }
+
+@media only screen and (max-width: 1919px) {
+    .container {
+        .login{
+            padding-left: 13%;
+            //padding-right: 13%;
+            padding-top: 9%;
+        }
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    .container {
+        .login{
+            padding-left: 11.5%;
+           // padding-right: 11.5%;
+            padding-top: 7%;
+        }
+    }
+
+ }
+
+ @media only screen and (max-width: 1280px) {
+    .container {
+        .login{
+            padding-left: 10%;
+           // padding-right: 10%;
+            padding-top: 5%;
+        }
+    }
+ }
+
+ @media only screen and (max-width: 1024px) {
+    .container {
+        .login{
+            padding-left: 7%;
+           // padding-right: 7%;
+            padding-top: 5%;
+        }
+    }
+ }

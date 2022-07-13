@@ -10,7 +10,7 @@ export default function Weather() {
             <div className={styles.temp}>
                 <img src={cloud} alt="Cloud" />
                 <h2>
-                    20º
+                    19º
                 </h2>
             </div>
         </div>

@@ -2,7 +2,7 @@
 
 body {
     background: linear-gradient(#FFFFFF, #F0F0F0);
-    background-image: url('../../assets/logo_uol.png');
+    background-image: url('../../assets/bola_logo.png');
     background-position: 0 21.48vh;
     background-repeat: no-repeat;
 }
@@ -18,27 +18,30 @@ body {
         h2 {
             margin: 0;
             font-size: 36px;
-            color: #C12D18;
+            color: $redPrimary;
             padding: 3px;
         }
 
         p{
             margin: 0;
             font-size: 24px;
-            color: #222222;
+            color: $blackSecondary;
             padding: 3px;
         }
 
         h1 {
             margin: 0;
             font-size: 64px;
-            color: #C12D18;
+            color: $redPrimary;
             padding: 3px;
         }
     }
 }
 
 @media only screen and (max-width: 1600px) {
+    body {
+        background-size: 40%;
+    }
     .container {
        .content {
         right: 5vw;
@@ -81,4 +84,4 @@ body {
         }
        }
     }
-} 
+}
