@@ -14,25 +14,29 @@ body {
         position: absolute;
         right: 6.97vw;
         text-align: end;
-        margin-top: 15.37vh;
+        // margin-top: 8.37vh;
+        max-width: 35%;
         h2 {
             margin: 0;
             font-size: 36px;
-            color: $redPrimary;
+            color: $colorRed
+;
             padding: 3px;
         }
 
         p{
             margin: 0;
             font-size: 24px;
-            color: $blackSecondary;
+            color: $colorBlack
+;
             padding: 3px;
         }
 
         h1 {
             margin: 0;
             font-size: 64px;
-            color: $redPrimary;
+            color: $colorRed
+;
             padding: 3px;
         }
     }
