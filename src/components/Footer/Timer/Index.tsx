@@ -10,7 +10,7 @@ export default function Timer() {
                 setCount(time - 1);
                 return counter(time - 1);
             }else {
-                return counter(60);
+                return setCount(time + 60);
             }
         }, 1000);
     }
