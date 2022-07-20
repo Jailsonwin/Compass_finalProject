@@ -1,6 +1,7 @@
 import styles from './Weather.module.scss';
 import cloud from 'assets/cloud.svg';
 import { useEffect, useState } from 'react';
+import Loading from '../Loading';
 
 export default function Weather() { 
 
@@ -18,7 +19,7 @@ export default function Weather() {
             .then(res => res.json())
             .then(result => {
                 const { main, name } = result;
-                setCity(`${name}`)
+                setCity(`${name} - PR`)
                 setTemp(Math.round(main.temp));
                 setIsLoading(false);
             });
@@ -34,6 +35,7 @@ export default function Weather() {
             const { main, name } = data;
             setCity(`${name} - DF`);
             setTemp(Math.round(main.temp));
+            setIsLoading(false);
             }
         )
 
@@ -41,7 +43,7 @@ export default function Weather() {
 
     return(
         <div className={styles.container} >
-            { isLoading ? <p>Loading...</p> : 
+            { isLoading ? <Loading/> : 
             <>
             <h3>
                 {city}

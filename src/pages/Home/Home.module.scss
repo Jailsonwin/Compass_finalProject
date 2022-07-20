@@ -1,12 +1,10 @@
 @import 'styles/variables';
-
 body {
     background: linear-gradient(#FFFFFF, #F0F0F0);
     background-image: url('../../assets/bola_logo.png');
     background-position: 0 21.48vh;
     background-repeat: no-repeat;
 }
-
 .container {
     .content {
         display: flex;
@@ -14,29 +12,25 @@ body {
         position: absolute;
         right: 6.97vw;
         text-align: end;
-        // margin-top: 8.37vh;
-        max-width: 35%;
+        margin-top: 15.37vh;
         h2 {
             margin: 0;
             font-size: 36px;
-            color: $colorRed
-;
+            color: $red;
             padding: 3px;
         }
 
         p{
             margin: 0;
             font-size: 24px;
-            color: $colorBlack
-;
+            color: $black;
             padding: 3px;
         }
 
         h1 {
             margin: 0;
             font-size: 64px;
-            color: $colorRed
-;
+            color: $red;
             padding: 3px;
         }
     }

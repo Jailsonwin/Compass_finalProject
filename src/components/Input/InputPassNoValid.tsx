@@ -2,25 +2,12 @@ import styles from './Input.module.scss';
 import Password from 'assets/icon-password.svg';
 import classNames from 'classnames';
 import { useContext, useEffect, useState } from 'react';
-import { UserContext } from '../../../common/Context/User';
+import { UserContext } from '../../common/Context/User';
 
-export default function InputPass() {
+export default function InputPassNoValid() {
     const [iconInside, setIconInside] = useState(false);
-    const { password, setPassword, setPassValid } = useContext(UserContext);
-
-    function validate(password: HTMLInputElement) {
-        let error = document.getElementById("error")! as HTMLDivElement;
-
-        if (password.value.length < 6) {
-            password.style.border = "1px solid #E9B425";
-            error.style.display = "flex";
-            setPassValid(false);
-        } else {
-            password.style.border = "";
-            error.style.display = "none";
-            setPassValid(true);
-        }
-    }
+    const { password, setPassword, error } = useContext(UserContext);
+   
 
     useEffect(()=> {
         if(password !== ""){
@@ -36,13 +23,14 @@ export default function InputPass() {
                 type="password" 
                 className={classNames({
                     [styles.inputPass]: true,
-                    [styles.inputPassIcon]: iconInside
+                    [styles.inputPassIcon]: iconInside,
+                    [styles.inputError]: error
                 })} 
                 value={password} 
                 placeholder="Senha" 
                 onChange={(event) => (
-                        setPassword(event.target.value),
-                        validate(event.target)
+                        setPassword(event.target.value)
+                       
                 )}
             />
             <img src={Password} alt="Password Icon" className={classNames({

@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
-import { UserContext } from '../../../common/Context/User';
+import { UserContext } from '../../common/Context/User';
 import classNames from 'classnames';
 import styles from './Input.module.scss';
 import User from 'assets/icon-user.svg';
@@ -7,19 +7,19 @@ import User from 'assets/icon-user.svg';
 
 export default function InputEmail() {
     const [iconInside, setIconInside] = useState(false);
-    const { email, setEmail, setEmailValid } = useContext(UserContext);
+    const { email, setEmail, setEmailValid, error, setError } = useContext(UserContext);
 
     function validate(email: HTMLInputElement) {
-        let error = document.getElementById('error')! as HTMLDivElement;
+        let rgex = /^([a-z]){1,}([a-z0-9._-]){1,}([@]){1}([a-z]){2,}([.]){1}([a-z]){2,}([.]?){1}([a-z]?){2,}$/i;
 
-        if(!email.value.includes("@") || !email.value.includes(".com")){
-			email.style.border = "1px solid #E9B425";
-			error.style.display = "flex";
-			setEmailValid(false);
-		}else {
+        if(rgex.test(email.value)){
 			email.style.border = "";
-			error.style.display = "none";
+			setError(false);
 			setEmailValid(true);
+		}else {
+            email.style.border = "1px solid #E9B425";
+			setError(true);
+			setEmailValid(false);
 		}
     }
 
@@ -35,7 +35,8 @@ export default function InputEmail() {
         <div className={styles.input}>
             <input type="email" className={classNames({
                     [styles.inputEmail]: true,
-                    [styles.inputUserIcon]: iconInside
+                    [styles.inputUserIcon]: iconInside,
+                    [styles.inputError]: error
                 })} value={email} placeholder="Usuário" onChange={(event)=> (
                 setEmail(event.target.value),
                 validate(event.target)

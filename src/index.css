@@ -1,10 +1,7 @@
-@import url(https://fonts.googleapis.com/css2?family=Italiana&family=Roboto:wght@100;300&display=swap);
-
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Mark Pro', sans-serif;
   box-sizing: border-box;
 }
-
 #root > main.container {
   display: flex;
   flex-direction: column;

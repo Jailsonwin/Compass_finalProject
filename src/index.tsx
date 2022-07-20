@@ -1,8 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import 'normalize.css';
-import './index.css';
 import Router from './routes/routes';
+import 'normalize.css';
+import ReactDOM from 'react-dom/client';
+import React from 'react';
+import './index.css';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

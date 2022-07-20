@@ -1,8 +1,36 @@
+import { UserContext } from 'common/Context/User';
+import { auth } from 'firebase-config';
+import { onAuthStateChanged, signOut } from 'firebase/auth';
+import { useContext, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Footer from '../../components/Footer';
 import Navbar from '../../components/Navbar';
 import styles from './Home.module.scss'
 
 export default function Home() {
+    const navigate = useNavigate();
+    const { user, setUser, setEmail, setPassword } = useContext(UserContext);
+
+    async function logOut() {
+        setEmail('');
+        setPassword('');
+        await signOut(auth);
+        navigate('/', {replace: true});
+    }
+    
+    useEffect(()=> {
+        let userInfo = localStorage.getItem('firebase:authUser:AIzaSyBwWKyBzBe_OpM9Es0Md2RLTKwbfPQ1-8c:[DEFAULT]');
+        
+        if(user === null ) {
+            navigate('/', {replace: true});
+        }
+
+        onAuthStateChanged(auth, (currentUser) => {
+            setUser(currentUser)
+        })
+        
+    }, [user, navigate, setUser, setEmail, setPassword])
+
     return(
         <div className={styles.container}>
             <Navbar/>
@@ -29,7 +57,7 @@ export default function Home() {
                     to enable our client's growth
                 </h1>
                 <p>
-                    que permitao o crescimento dos nossos clientes
+                    que permitam o crescimento dos nossos clientes
                 </p>
             </div>
             <Footer/>
