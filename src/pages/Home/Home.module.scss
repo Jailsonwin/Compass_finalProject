@@ -36,50 +36,36 @@ body {
     }
 }
 
-@media only screen and (max-width: 1600px) {
+@media only screen and (max-width: 768px) {
     body {
-        background-size: 40%;
+        background-size: 50%;
+        background-position: -30px 300px;
+    }
+    html {
+         line-height: 1.20;
     }
     .container {
-       .content {
-        right: 5vw;
-
-        h2 {
-            font-size: 30px;
+        .content {
+         margin-right: 10px;
+         margin-top: 80px;   
+         margin-bottom: 80px;
+         h2 {
+             font-size: 16px;
+         }
+ 
+         p {
+             font-size: 12px;
+         }
+ 
+         h1 {
+             font-size: 28px;
+         }
         }
-
-        p {
-            font-size: 20px;
-        }
-
-        h1 {
-            font-size: 50px;
-        }
-       }
-    }
+     }
 }
 
-@media only screen and (max-width: 1366px) {
-
+@media only screen and (max-width: 700px) {
     body {
-        background-position: -150px 24vh;
-    }
-
-    .container {
-       .content {
-        right: 5vw;
-
-        h2 {
-            font-size: 28px;
-        }
-
-        p {
-            font-size: 17px;
-        }
-
-        h1 {
-            font-size: 45px;
-        }
-       }
+        background-size: 0;
     }
 }

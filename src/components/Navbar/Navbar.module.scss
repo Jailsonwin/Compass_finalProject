@@ -9,6 +9,18 @@
         width: 150px;
         height: 43px;
     }
-    
-
 }
+
+@media only screen and (max-width: 768px) {
+    .container {
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+     img{
+        width: 250px;
+        height: 100px;
+        margin-left: 0;
+     }
+    }
+ }

@@ -49,3 +49,46 @@
     }
     
 }
+
+@media only screen and (max-width: 1919px) {
+    .form {
+        padding-top: 6rem;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    .form {
+        padding-top: 3.5rem;
+    }
+
+}
+
+ @media only screen and (max-width: 1280px) {
+    .form {
+        padding-top: 3rem;
+    }
+}
+
+ @media only screen and (max-width: 1200px) {
+    .form {
+        padding-top: 3rem;
+    }
+}
+
+ @media only screen and (max-width: 768px) {
+    .form {
+        .button {
+            width: 100%;
+        }
+        .error{
+            width: 100%;
+        }
+
+        .registerCall {
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+}
